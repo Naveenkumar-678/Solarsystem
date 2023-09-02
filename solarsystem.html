@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #sun {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+
+        .planet {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #earth {
+            background-color: #00aad9; /* Blue */
+            animation: orbit-earth 5s linear infinite;
+        }
+
+        #mars {
+            background-color: #FF4136; /* Red */
+            animation: orbit-mars 7s linear infinite;
+        }
+
+        @keyframes orbit-earth {
+            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @keyframes orbit-mars {
+            from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="sun"></div>
+    <div class="planet" id="earth"></div>
+    <div class="planet" id="mars"></div>
+</body>
+</html>
